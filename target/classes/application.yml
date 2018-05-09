@@ -1,0 +1,52 @@
+logging:
+    level:
+        org:
+            springframework:
+                security: DEBUG
+        root: INFO
+server:
+    port: 8080
+spring:
+  datasource:
+     dbcp2:
+        initial-size: 10
+        max-idle: 8
+        min-idle: 8
+     driverClassName: com.mysql.jdbc.Driver
+     password: 11221122x
+     url: jdbc:mysql://120.27.114.15:3306/test_oauth2?useSSL=false
+     username: testoauth2
+  thymeleaf:
+    prefix:
+      classpath: /templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+
+security:
+  oauth2:
+    client:
+      client-id: f0C1WRGjb3rqra6ascCczpka
+      client-secret: F6wprkcTXzILxjWxT1e9Lm2zPZ6ObmuX
+      access-token-uri: http://openapi.baidu.com/oauth/2.0/token
+      user-authorization-uri: http://openapi.baidu.com/oauth/2.0/authorize
+    resource:
+      userInfoUri: https://openapi.baidu.com/rest/2.0/passport/users/getInfo
+
+github:
+  client:
+    clientId: 7e357515cad953ec46dc
+    clientSecret: 75c50670f53f2cf95032c966c4566409f1d2310a
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
