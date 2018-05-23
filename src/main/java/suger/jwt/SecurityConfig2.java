@@ -16,8 +16,8 @@ import suger.jwt.JWTLoginFilter;
  * jwt测试
  */
 @Slf4j
-//@Configuration
-//@EnableWebSecurity
+@Configuration
+@EnableWebSecurity
 public class SecurityConfig2 extends WebSecurityConfigurerAdapter {
 
     public SecurityConfig2(){

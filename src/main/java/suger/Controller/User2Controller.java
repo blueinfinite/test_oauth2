@@ -13,7 +13,7 @@ import suger.OAuth2Server.MyUserDetails;
 import suger.OAuth2Server.UserModel;
 
 @Slf4j
-@RestController
+//@RestController
 public class User2Controller {
 
 

@@ -16,9 +16,9 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 
 @Slf4j
-@Configuration
-@EnableAuthorizationServer
-@EnableResourceServer
+//@Configuration
+//@EnableAuthorizationServer
+//@EnableResourceServer
 public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
     public OAuth2AuthorizationConfig() {
         log.info("============ OAuth2AuthorizationConfig");

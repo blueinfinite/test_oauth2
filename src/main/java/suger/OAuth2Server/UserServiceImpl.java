@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import suger.TestFun;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
@@ -14,8 +15,8 @@ import java.util.function.Predicate;
 
 import static org.hibernate.validator.internal.util.Contracts.assertTrue;
 
-@Primary
-@Service("userDetailsService")
+//@Primary
+//@Service("userDetailsService")
 public class UserServiceImpl implements UserService {
     private final static Set<UserModel> users = new HashSet<>();
 
@@ -47,8 +48,20 @@ public class UserServiceImpl implements UserService {
 
     public static void main(String[] args){
 
+        HashMap<String, Integer> list = new HashMap<>();
+        list.put("a",1);
+        list.put("b",2);
+
+
+
         Predicate<Integer> boolValue = x -> x > 5;
         TestFun<Integer> boolValue2 = x -> x > 6;
+
+//        try {
+//            boolValue.wait();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         Consumer<Integer> c1 = x -> x++;
         c1.accept(2);
